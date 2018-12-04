@@ -1,0 +1,20 @@
+2018-12-02T09:26:58.293Z - info: [ui] [AppStore] loading 0 repositories from store
+2018-12-02T09:27:01.196Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-12-02T09:27:01.197Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-12-02T09:27:04.911Z - info: [ui] Stats reported.
+2018-12-02T09:27:06.421Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 5.616s)
+2018-12-02T09:31:42.035Z - info: [ui] [AppStore] loading 0 repositories from store
+2018-12-02T09:31:46.622Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-12-02T09:31:46.622Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-12-02T09:31:50.522Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 4.217s)
+2018-12-02T09:33:39.393Z - info: [ui] [AppStore] loading 0 repositories from store
+2018-12-02T09:33:39.673Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-12-02T09:33:39.674Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-12-02T09:34:44.564Z - info: [ui] [AppStore] adding repository at C:\Users\Administrator\Documents\GitHub\login to store
+2018-12-02T09:34:45.867Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 1.142s)
+2018-12-02T09:34:49.555Z - info: [ui] Executing isUsingLFS: git lfs track (took 3.937s)
+2018-12-02T09:35:29.726Z - info: [main] opening in browser: https://github.com/password_reset
+2018-12-02T09:35:47.053Z - info: [ui] Executing getBranches: git for-each-ref --format=%(refname)%00%(refname:short)%00%(upstream:short)%00%(objectname)%00%(author)%00%(committer)%00%(parent)%00%(symref)%00%(subject)%00%(body)%00%(trailers:unfold,only)%00%1F refs/heads refs/remotes (took 4.002s)
+2018-12-02T09:35:47.110Z - info: [ui] Executing getRecentBranches: git log -g --no-abbrev-commit --pretty=oneline HEAD -n 2500 -- (took 4.048s)
+2018-12-02T09:35:47.132Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 2.928s)
+2018-12-02T10:28:59.331Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 3.230s)

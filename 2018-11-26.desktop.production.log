@@ -1,0 +1,72 @@
+2018-11-26T03:34:25.185Z - info: [main] Received possible protocol arguments: 2
+2018-11-26T03:34:28.869Z - info: [ui] [AppStore] loading 0 repositories from store
+2018-11-26T03:34:29.163Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:29.165Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:29.167Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:31.051Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:31.261Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:36.498Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-11-26T03:34:36.498Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-11-26T03:34:36.918Z - info: [ui] Opt in reported.
+2018-11-26T03:34:37.560Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:34:47.547Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 16.240s)
+2018-11-26T03:34:47.549Z - error: [ui] Error checking for updates
+Error: Command failed: 4294967295
+System.AggregateException: ����һ���������� ---> System.Exception: Couldn't acquire lock, is another instance running
+   �� Squirrel.SingleGlobalInstance..ctor(String key, TimeSpan timeOut)
+   �� Squirrel.UpdateManager.<acquireUpdateLock>b__32_0()
+   �� System.Threading.Tasks.Task`1.InnerInvoke()
+   �� System.Threading.Tasks.Task.Execute()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.Update.Program.<CheckForUpdate>d__8.MoveNext()
+   --- �ڲ��쳣��ջ���ٵĽ�β ---
+   �� System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   �� System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   �� System.Threading.Tasks.Task`1.get_Result()
+   �� Squirrel.Update.Program.executeCommandLine(String[] args)
+   �� Squirrel.Update.Program.main(String[] args)
+   �� Squirrel.Update.Program.Main(String[] args)
+---> (�ڲ��쳣 #0) System.Exception: Couldn't acquire lock, is another instance running
+   �� Squirrel.SingleGlobalInstance..ctor(String key, TimeSpan timeOut)
+   �� Squirrel.UpdateManager.<acquireUpdateLock>b__32_0()
+   �� System.Threading.Tasks.Task`1.InnerInvoke()
+   �� System.Threading.Tasks.Task.Execute()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.Update.Program.<CheckForUpdate>d__8.MoveNext()<---
+
+
+    at AutoUpdater.emitError (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\auto-updater-win.js:70:24)
+    at squirrelUpdate.checkForUpdate (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\auto-updater-win.js:46:21)
+    at C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\squirrel-update-win.js:89:14
+    at ChildProcess.<anonymous> (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\squirrel-update-win.js:71:14)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)
+2018-11-26T03:34:53.211Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:35:03.671Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:35:13.174Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:35:36.070Z - info: [main] opening in browser: https://github.com/join?source=github-desktop
+2018-11-26T03:35:38.458Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:35:44.294Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:36:08.126Z - info: [ui] [Welcome] advancing to step: ConfigureGit
+2018-11-26T03:36:10.457Z - info: [ui] Executing getConfigValueInPath: git config -z --global user.name (took 2.318s)
+2018-11-26T03:36:29.173Z - info: [ui] [Welcome] no sign in step found. ignoring...
+2018-11-26T03:36:53.294Z - info: [ui] [Welcome] advancing to step: UsageOptOut
+2018-11-26T03:37:58.094Z - info: [main] Received possible protocol arguments: 1
+2018-11-26T04:20:51.463Z - info: [ui] [AppStore] loading 0 repositories from store
+2018-11-26T04:21:08.345Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-11-26T04:21:08.345Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-11-26T04:21:11.551Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 7.949s)
+2018-11-26T04:21:20.745Z - info: [ui] Stats reported.

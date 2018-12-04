@@ -1,0 +1,71 @@
+2018-12-04T00:24:48.232Z - info: [ui] [AppStore] loading 1 repositories from store
+2018-12-04T00:24:50.980Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 1.151s)
+2018-12-04T00:24:51.652Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-12-04T00:24:51.652Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-12-04T00:24:52.828Z - info: [ui] Executing getRecentBranches: git log -g --no-abbrev-commit --pretty=oneline HEAD -n 2500 -- (took 1.567s)
+2018-12-04T00:24:52.828Z - info: [ui] Executing getBranches: git for-each-ref --format=%(refname)%00%(refname:short)%00%(upstream:short)%00%(objectname)%00%(author)%00%(committer)%00%(parent)%00%(symref)%00%(subject)%00%(body)%00%(trailers:unfold,only)%00%1F refs/heads refs/remotes (took 1.579s)
+2018-12-04T00:24:53.162Z - info: [ui] Executing getConfigValueInPath: git config -z trailer.separators (took 1.438s)
+2018-12-04T00:24:53.660Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 2.254s)
+2018-12-04T00:25:00.402Z - info: [ui] Stats reported.
+2018-12-04T00:34:35.932Z - info: [main] Received possible protocol arguments: 2
+2018-12-04T00:34:38.357Z - info: [ui] [AppStore] loading 1 repositories from store
+2018-12-04T00:34:41.669Z - info: [ui] launching: 1.5.0 (Windows 10.0.17134)
+2018-12-04T00:34:41.670Z - info: [ui] execPath: 'C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\GitHubDesktop.exe'
+2018-12-04T00:34:41.679Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 3.086s)
+2018-12-04T00:34:41.856Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 3.055s)
+2018-12-04T00:34:48.354Z - error: [ui] Error checking for updates
+Error: Command failed: 4294967295
+System.AggregateException: ����һ���������� ---> System.Exception: Couldn't acquire lock, is another instance running
+   �� Squirrel.SingleGlobalInstance..ctor(String key, TimeSpan timeOut)
+   �� Squirrel.UpdateManager.<acquireUpdateLock>b__32_0()
+   �� System.Threading.Tasks.Task`1.InnerInvoke()
+   �� System.Threading.Tasks.Task.Execute()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.Update.Program.<CheckForUpdate>d__8.MoveNext()
+   --- �ڲ��쳣��ջ���ٵĽ�β ---
+   �� System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   �� System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   �� System.Threading.Tasks.Task`1.get_Result()
+   �� Squirrel.Update.Program.executeCommandLine(String[] args)
+   �� Squirrel.Update.Program.main(String[] args)
+   �� Squirrel.Update.Program.Main(String[] args)
+---> (�ڲ��쳣 #0) System.Exception: Couldn't acquire lock, is another instance running
+   �� Squirrel.SingleGlobalInstance..ctor(String key, TimeSpan timeOut)
+   �� Squirrel.UpdateManager.<acquireUpdateLock>b__32_0()
+   �� System.Threading.Tasks.Task`1.InnerInvoke()
+   �� System.Threading.Tasks.Task.Execute()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- �����쳣����һλ���ж�ջ���ٵ�ĩβ ---
+   �� System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   �� System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   �� Squirrel.Update.Program.<CheckForUpdate>d__8.MoveNext()<---
+
+
+    at AutoUpdater.emitError (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\auto-updater-win.js:70:24)
+    at squirrelUpdate.checkForUpdate (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\auto-updater-win.js:46:21)
+    at C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\squirrel-update-win.js:89:14
+    at ChildProcess.<anonymous> (C:\Users\Administrator\AppData\Local\GitHubDesktop\app-1.5.0\resources\electron.asar\browser\api\auto-updater\squirrel-update-win.js:71:14)
+    at emitTwo (events.js:126:13)
+    at ChildProcess.emit (events.js:214:7)
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:198:12)
+2018-12-04T00:34:48.367Z - info: [ui] Executing getRecentBranches: git log -g --no-abbrev-commit --pretty=oneline HEAD -n 2500 -- (took 5.470s)
+2018-12-04T00:34:48.368Z - info: [ui] Executing installGlobalLFSFilter: git lfs install --skip-repo (took 9.436s)
+2018-12-04T00:34:48.369Z - info: [ui] Executing getCommits: git log HEAD --date=raw --max-count=100 --pretty=%H%x1F%s%x1F%b%x1F%an <%ae> %ad%x1F%cn <%ce> %cd%x1F%P%x1F%(trailers:unfold,only) -z --no-show-signature --no-color --not --remotes -- (took 5.365s)
+2018-12-04T00:34:50.765Z - info: [ui] Executing getRemotes: git remote -v (took 7.715s)
+2018-12-04T00:34:50.765Z - info: [ui] Executing getAuthorIdentity: git var GIT_AUTHOR_IDENT (took 7.646s)
+2018-12-04T00:34:55.990Z - info: [ui] Executing getConfigValueInPath: git config -z trailer.separators (took 12.838s)
+2018-12-04T00:34:56.075Z - info: [ui] Executing getConfigValueInPath: git config -z trailer.separators (took 7.703s)
+2018-12-04T00:49:12.299Z - error: [ui] `git rev-parse --is-bare-repository` exited with an unexpected code: 128.
+fatal: not a git repository (or any of the parent directories): .git
+
+(The error was parsed as 27: This is not a git repository.)
+2018-12-04T01:43:50.965Z - info: [ui] Executing getStatus: git --no-optional-locks status --untracked-files=all --branch --porcelain=2 -z (took 1.165s)
