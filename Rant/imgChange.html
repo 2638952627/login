@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta content="text/css " charset="utf-8">
+    <title>02</title>
+
+    <style type="text/css">
+        #main{
+          width: 273px;
+          background-color: #99ff99;
+          margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+      }
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload=function () {
+            //为按钮绑定响应函数
+            var up=document.getElementById("up");
+            var down=document.getElementById("down");
+            //获取img 标签
+            var img=document.getElementsByTagName("img")[0];
+
+            var phoarr=["img/index.img/logo.png","img/index.img/shipin.png","img/index.img/p01.jpg","img/index.img/p02.jpg"]
+
+            var index=0;   //创建变量，保存当前正在显示的图片的索引
+
+            var info=document.getElementById("info");  //获取id为 info 的元素
+            info.innerText="一共有"+phoarr.length+";现在是第"+(index+1)+"张";
+
+
+            up.onclick=function () {
+                //切换图片就是改变图片的src属性
+
+                //切换到上一张，
+                index--;
+                if(index<0){
+                    index=phoarr.length-1;
+                }
+                img.src=phoarr[index];
+                info.innerText="一共有"+phoarr.length+";现在是第"+(index+1)+"张";
+            }
+            down.onclick=function () {
+                //切换到下一张，
+                index++;
+                if(index>phoarr.length-1){
+                    index=0;
+                }
+                img.src=phoarr[index];
+                info.innerText="一共有"+phoarr.length+";现在是第"+(index+1)+"张";
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+     <div id="main">
+
+         <p id="info"></p>
+         <img src="img/index.img/logo.png" alt="">
+
+         <button id="up">上一张</button>
+         <button id="down">下一张</button>
+     </div>
+
+</body>
+
+</html>

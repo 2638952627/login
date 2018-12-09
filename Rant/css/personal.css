@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+
+    border-radius: 20px;
+}
+.father{
+    float: left;
+    margin-left: 200px;
+    margin-top: -200px;
+}
+ul{
+
+    width: 150px;
+    height: 200px;
+}
+ui li a{
+
+}

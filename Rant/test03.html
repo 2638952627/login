@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta content="text/css " charset="utf-8">
+    <title>实验 三</title>
+
+    <script type="text/javascript">
+
+        function Person(name,age) {
+            this.name=name;
+            this.age=age;
+        }
+
+        Person.prototype.toString=function () {
+            return "name="+this.name+"|| age="+this.age;
+        }
+
+        var rer1=new Person("bob",18);
+        var rer2=new Person("tom",28);
+        var rer3=new Person("jack",38);
+
+        var perarr=[rer1,rer2,rer3];
+
+
+        function getadult(arr) {
+            var adult=[];
+            for (var i=0;i<arr.length;i++){
+                if(arr[i].age>18)
+                {
+                    adult.push(arr[i]);
+                }
+            }
+            return adult;  //记得返回值啊
+        }
+
+      var result=getadult(perarr);
+
+        for (var i=0;i<result.length;i++){
+            alert(result[i]);
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

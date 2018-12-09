@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta content="text/css " charset="utf-8">
+    <title>全选练习</title>
+    <script type="text/javascript">
+        window.onload=function () {
+
+            // 获取四个多选框的items
+            var items=document.getElementsByName("items");
+
+            //1,全选按钮
+            var checkAllBtn=document.getElementById("checkAllBtn");
+            checkAllBtn.onclick=function () {
+                //遍历items
+                for (var i=0;i<items.length;i++){
+                    //设置四个多选框变成选中状态
+                    //多选框的checked属性
+                    items[i].checked=true;
+                }
+                checkAllBox.checked=true;
+            }
+
+            //2,全不选按钮
+            var checkNoBtn=document.getElementById("checkNoBtn");
+            checkNoBtn.onclick=function () {
+                //遍历items
+                for (var i=0;i<items.length;i++){
+                    //设置四个多选框变成选中状态
+                    //多选框的checked属性
+                    items[i].checked=false;
+                }
+                checkAllBox.checked=false;
+            }
+
+            //3,反选按钮
+            var checkRevRtn=document.getElementById("checkRevRtn");
+            checkRevRtn.onclick=function () {
+                //遍历items
+                for (var i=0;i<items.length;i++){
+                    //判断多选框状态
+                   if(items[i].checked==false) {
+                       items[i].checked=true;
+                   }else {
+                       items[i].checked=false
+                   }
+
+                    checkAllBox.checked=true;
+
+                    //判断四个是否被选中
+                    for(var j=0;j<items.length;j++){
+                        // 反向思考，只要有一个没被选中，说明不是全选
+                        if(!items[j].checked){
+                            checkAllBox.checked=false;
+                            break;
+                        }
+                    }
+
+                }
+
+                // 反选框也要判断是否全都选中
+
+            }
+
+            //4,提交按钮
+            var sentBtn=document.getElementById("sentBtn");
+            sentBtn.onclick=function () {
+                //遍历items
+                for (var i=0;i<items.length;i++){
+                   //判断是否选中
+                    if(items[i].checked){
+                        alert(items[i].value)
+                    }
+                }
+            }
+
+            /*5. 全选，全不选
+
+            在事件响应函数中，响应函数给谁绑定，this就是谁
+            */
+            var checkAllBox=document.getElementById("checkAllBox");
+            checkAllBox.onclick=function () {
+
+                for (var i=0;i<items.length;i++){
+                    items[i].checked=this.checked;
+                }
+            }
+
+            //6. checkAllBox 与选项框向匹配
+            //四个全选，checkAllBox 应该选中
+            //四个不全选， checkAllBox 不选中
+
+            //为四个选项框分别绑定
+            for(var i=0;i<items.length;i++){
+                items[i].onclick=function () {
+                    //将checkAllBox设置为选中状态
+                    //初始化默认状态为 true, 根据二次循环中是否有未被全选进行更改为flase ,
+
+                    //判断四个是否被选中
+                    for(var j=0;j<items.length;j++){
+                        // 反向思考，只要有一个没被选中，说明不是全选
+                        if(!items[j].checked){
+                            checkAllBox.checked=false;
+                            break;
+                        }
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+
+      <form action="" method="post">
+          您爱好的运动是：<input type="checkbox" id="checkAllBox">全选/去不选<br> <br> <br>
+
+          <input type="checkbox" name="items" value="football">/足球
+          <input type="checkbox" name="items" value="basketball">/蓝球
+          <input type="checkbox" name="items" value="ping-pong">/乒乓球
+          <input type="checkbox" name="items" value="badminton">/羽毛球  <br> <br> <br>
+
+          <input type="button" id="checkAllBtn" value="全选">
+          <input type="button" id="checkNoBtn" value="全不选">
+          <input type="button" id="checkRevRtn" value="反选">
+          <input type="button" id="sentBtn" value="提交">
+
+      </form>
+</body>
+</html>
